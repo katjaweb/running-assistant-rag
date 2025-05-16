@@ -1,0 +1,497 @@
+[
+  {
+    "course": "running-assistant-rag",
+    "documents": [
+      {
+        "text": "Intervalltraining ist eine Trainingsmethode, bei der sich intensive Belastungsphasen mit Erholungsphasen abwechseln. Durch diese Wechsel zwischen hoher und niedriger Belastung werden Ausdauer und Schnelligkeit effektiv verbessert, da der Körper sowohl anaerob als auch aerob gefordert wird.",
+        "section": "Training",
+        "question": "Was ist Intervalltraining?"
+      },
+      {
+        "text": "Lange, langsame Läufe sind ein zentraler Bestandteil des Ausdauertrainings. Sie dienen dazu, die Grundlagenausdauer zu verbessern, das Herz-Kreislauf-System zu stärken und die Fähigkeit des Körpers zur Fettverbrennung zu erhöhen. Diese Läufe helfen auch, die Muskulatur und Sehnen auf längere Belastungen vorzubereiten.",
+        "section": "Training",
+        "question": "Wozu sind lange, langsame Läufe gut?"
+      },
+      {
+        "text": "Regeneration ist ein essenzieller Teil des Trainingsprozesses. Während der Erholungsphasen kann sich der Körper von den Trainingsreizen erholen, Muskelgewebe reparieren und sich an die Belastungen anpassen. Ohne ausreichende Regeneration steigt das Risiko für Verletzungen, Überlastungen und Leistungsabfall.",
+        "section": "Regeneration",
+        "question": "Warum ist Regeneration im Laufsport wichtig?"
+      },
+      {
+        "text": "Flüssigkeitszufuhr ist beim Laufen sehr wichtig, da der Körper durch Schwitzen viel Wasser verliert. Eine unzureichende Hydrierung kann zu Dehydrierung führen, die wiederum Müdigkeit, Krämpfe und eine Verschlechterung der Leistungsfähigkeit verursachen kann. Deshalb sollte man vor, während und nach dem Training regelmäßig trinken.",
+        "section": "Ernährung und Flüssigkeit",
+        "question": "Warum ist Flüssigkeitszufuhr beim Laufen wichtig?"
+      },
+      {
+        "text": "Übertraining entsteht, wenn das Trainingsvolumen oder die Trainingsintensität zu hoch sind und die Regenerationszeit zu kurz ist. Typische Symptome sind anhaltende Müdigkeit, ein Rückgang der Leistungsfähigkeit, Schlafstörungen und eine erhöhte Anfälligkeit für Verletzungen. Es ist wichtig, die Signale des Körpers zu erkennen und entsprechend zu reagieren.",
+        "section": "Gesundheit",
+        "question": "Woran erkennt man Übertraining?"
+      },
+      {
+        "text": "Der optimale Laufschuh sollte gut passen, eine ausreichende Dämpfung bieten und zu deinem Laufstil passen, um Verletzungen vorzubeugen.",
+        "section": "Ausrüstung",
+        "question": "Wie finde ich den richtigen Laufschuh?"
+      },
+      {
+        "text": "Eine ausgewogene Ernährung mit ausreichend Kohlenhydraten, Proteinen und Fetten unterstützt die Leistungsfähigkeit und Regeneration beim Laufen.",
+        "section": "Ernährung",
+        "question": "Welche Rolle spielt Ernährung im Laufsport?"
+      },
+      {
+        "text": "Das Aufwärmen vor dem Lauf bereitet den Körper auf die Belastung vor und reduziert das Verletzungsrisiko durch Steigerung der Durchblutung und Mobilisierung der Gelenke.",
+        "section": "Training",
+        "question": "Warum ist Aufwärmen wichtig?"
+      },
+      {
+        "text": "Das Dehnen nach dem Lauf fördert die Beweglichkeit und unterstützt die Regeneration, sollte jedoch nicht zu intensiv oder statisch vor dem Laufen durchgeführt werden.",
+        "section": "Training",
+        "question": "Sollte man sich vor oder nach dem Laufen dehnen?"
+      },
+      {
+        "text": "Tempoläufe sind Läufe mit einem schnelleren, aber kontrollierten Tempo, die helfen, die anaerobe Schwelle zu erhöhen und die Laufgeschwindigkeit zu verbessern.",
+        "section": "Training",
+        "question": "Was sind Tempoläufe?"
+      },
+      {
+        "text": "Der Pulsbereich beim Ausdauertraining liegt typischerweise bei 60-80 % der maximalen Herzfrequenz und fördert die Fettverbrennung und Herz-Kreislauf-Gesundheit.",
+        "section": "Training",
+        "question": "In welchem Pulsbereich sollte man Ausdauer trainieren?"
+      },
+      {
+        "text": "Barfußlaufen stärkt die Fußmuskulatur und kann die Lauftechnik verbessern, sollte jedoch langsam und vorsichtig eingeführt werden.",
+        "section": "Training",
+        "question": "Welche Vorteile hat Barfußlaufen?"
+      },
+      {
+        "text": "Ein Marathon ist ein Langstreckenlauf über 42,195 Kilometer und erfordert gezieltes Ausdauertraining sowie eine entsprechende Vorbereitung.",
+        "section": "Wettkämpfe",
+        "question": "Wie lang ist ein Marathon?"
+      },
+      {
+        "text": "Die optimale Lauftechnik umfasst aufrechte Körperhaltung, kurze Bodenkontaktzeiten und eine aktive Fußführung, um effizienter und verletzungsfrei zu laufen.",
+        "section": "Technik",
+        "question": "Was zeichnet eine gute Lauftechnik aus?"
+      },
+      {
+        "text": "Ein Trainingsplan sollte auf individuelle Ziele, Fitnesslevel und verfügbare Zeit abgestimmt sein und eine Mischung aus Ausdauer-, Kraft- und Techniktraining enthalten.",
+        "section": "Training",
+        "question": "Wie sollte ein guter Trainingsplan für Läufer aussehen?"
+      },
+      {
+        "text": "Krafttraining unterstützt Läufer, indem es die Muskulatur stärkt, die Stabilität verbessert und Verletzungen vorbeugt.",
+        "section": "Training",
+        "question": "Warum ist Krafttraining für Läufer wichtig?"
+      },
+      {
+        "text": "Laufschuhe sollten je nach Fußtyp und Laufstil ausgewählt werden, z. B. Stabilitätsschuhe für Überpronierer oder neutrale Schuhe für Normalfußläufer.",
+        "section": "Ausrüstung",
+        "question": "Welche Laufschuhe eignen sich für Überpronierer?"
+      },
+      {
+        "text": "Die Laufökonomie beschreibt, wie effizient ein Läufer Energie verbraucht; eine bessere Laufökonomie bedeutet, dass man bei gleicher Anstrengung schneller laufen kann.",
+        "section": "Training",
+        "question": "Was versteht man unter Laufökonomie?"
+      },
+      {
+        "text": "Wettkampfvorbereitung beinhaltet eine schrittweise Steigerung der Trainingsintensität, ausreichende Regeneration und eine angepasste Ernährung vor dem Rennen.",
+        "section": "Wettkämpfe",
+        "question": "Wie bereitet man sich optimal auf einen Wettkampf vor?"
+      },
+      {
+        "text": "Das Laufen auf Asphalt ist belastender für die Gelenke als das Laufen auf weichem Waldboden, jedoch sind Asphaltstrecken oft besser planbar und schneller.",
+        "section": "Training",
+        "question": "Was sind die Vor- und Nachteile des Laufens auf Asphalt?"
+      },
+      {
+        "text": "Richtiges Atmen beim Laufen unterstützt die Sauerstoffversorgung und kann Ermüdung vorbeugen; häufig wird empfohlen, durch Nase und Mund zu atmen.",
+        "section": "Technik",
+        "question": "Wie sollte man beim Laufen atmen?"
+      },
+      {
+        "text": "Eine Pulsuhr kann helfen, das Training zu steuern, den Fortschritt zu messen und Überlastungen zu vermeiden.",
+        "section": "Ausrüstung",
+        "question": "Welche Vorteile bietet eine Pulsuhr für Läufer?"
+      },
+      {
+        "text": "Stretching sollte nach dem Lauf zur Förderung der Beweglichkeit erfolgen, während vor dem Lauf eher dynamisches Aufwärmen sinnvoll ist.",
+        "section": "Training",
+        "question": "Wann ist Stretching beim Laufen sinnvoll?"
+      },
+      {
+        "text": "Trailrunning ist das Laufen auf unbefestigten Wegen und erfordert besondere Schuhe sowie erhöhte Aufmerksamkeit für Technik und Sicherheit.",
+        "section": "Training",
+        "question": "Was ist Trailrunning?"
+      },
+      {
+        "text": "Ein Tempowechseltraining (Fartlek) kombiniert schnelle und langsame Laufphasen und verbessert sowohl die Ausdauer als auch die Schnelligkeit.",
+        "section": "Training",
+        "question": "Was ist Fartlek-Training?"
+      },
+      {
+        "text": "Kohlenhydrate sind die wichtigste Energiequelle beim Laufen, während Proteine hauptsächlich für die Muskelregeneration wichtig sind.",
+        "section": "Ernährung",
+        "question": "Welche Rolle spielen Kohlenhydrate und Proteine im Laufsport?"
+      },
+      {
+        "text": "Überlastungserscheinungen können durch zu schnelles Trainingssteigerung, falsche Technik oder ungeeignete Schuhe verursacht werden und sollten frühzeitig behandelt werden.",
+        "section": "Gesundheit",
+        "question": "Was sind häufige Ursachen für Überlastungsverletzungen beim Laufen?"
+      },
+      {
+        "text": "Cross-Training mit Radfahren oder Schwimmen kann Läufern helfen, die Fitness zu erhalten und Verletzungen zu vermeiden.",
+        "section": "Training",
+        "question": "Welche Vorteile hat Cross-Training für Läufer?"
+      },
+      {
+        "text": "Ein Lauf-ABC umfasst Übungen zur Verbesserung der Lauftechnik, Koordination und Beweglichkeit.",
+        "section": "Training",
+        "question": "Was ist das Lauf-ABC?"
+      },
+      {
+        "text": "Ein Tempodauerlauf ist ein Lauf in einem konstant schnelleren Tempo, der die anaerobe Schwelle trainiert.",
+        "section": "Training",
+        "question": "Was ist ein Tempodauerlauf?"
+      },
+      {
+        "text": "Plyometrisches Training verbessert die Explosivkraft und kann die Laufleistung positiv beeinflussen.",
+        "section": "Training",
+        "question": "Wie kann Plyometrisches Training Läufern helfen?"
+      },
+      {
+        "text": "Die richtige Ernährung vor einem Wettkampf sollte kohlenhydratreich und leicht verdaulich sein, um Energie zu sichern und Magenprobleme zu vemeiden.",
+        "section": "Ernährung",
+        "question": "Wie sollte man sich vor einem Wettkampf ernähren?"
+        },
+        {
+        "text": "Laufschuhe sollten alle 500-800 Kilometer gewechselt werden, da die Dämpfung und Stabilität nachlassen.",
+        "section": "Ausrüstung",
+        "question": "Wann sollte man Laufschuhe wechseln?"
+        },
+        {
+        "text": "Der natürliche Laufstil vermeidet Überpronation und fördert eine ökonomische Laufbewegung.",
+        "section": "Technik",
+        "question": "Was versteht man unter natürlichem Laufstil?"
+        },
+        {
+        "text": "Wettkämpfe sollten in den Trainingsplan integriert werden, um Motivation zu steigern und Trainingsziele zu setzen.",
+        "section": "Wettkämpfe",
+        "question": "Warum sind Wettkämpfe für Läufer wichtig?"
+        },
+        {
+        "text": "Laufsport kann die mentale Gesundheit verbessern, Stress abbauen und das allgemeine Wohlbefinden steigern.",
+        "section": "Gesundheit",
+        "question": "Wie wirkt sich Laufen auf die mentale Gesundheit aus?"
+        },
+        {
+        "text": "Regelmäßige Laufanalyse kann helfen, die Technik zu verbessern und Verletzungen vorzubeugen.",
+        "section": "Technik",
+        "question": "Wie kann eine Laufanalyse Läufern helfen?"
+        },
+        {
+        "text": "Das Laufen in der Gruppe kann die Motivation steigern und für soziale Interaktion sorgen.",
+        "section": "Training",
+        "question": "Welche Vorteile hat das Laufen in der Gruppe?"
+        },
+        {
+        "text": "Energiegel und Sportgetränke können bei langen Läufen helfen, die Energiereserven aufzufüllen und den Flüssigkeitshaushalt zu stabilisieren.",
+        "section": "Ernährung",
+        "question": "Wann sind Energiegel und Sportgetränke sinnvoll?"
+        },
+        {
+        "text": "Die richtige Laufbekleidung sollte atmungsaktiv, leicht und den Witterungsbedingungen angepasst sein.",
+        "section": "Ausrüstung",
+        "question": "Welche Eigenschaften sollte Laufbekleidung haben?"
+        },
+        {
+        "text": "Das Tragen von Kompressionsstrümpfen kann die Durchblutung fördern und die Regeneration unterstützen.",
+        "section": "Gesundheit",
+        "question": "Welche Vorteile haben Kompressionsstrümpfe für Läufer?"
+        },
+        {
+        "text": "Laufen auf unebenem Gelände stärkt die Muskulatur und verbessert die Koordination.",
+        "section": "Training",
+        "question": "Welche Vorteile hat das Laufen auf unebenem Gelände?"
+        },
+        {
+        "text": "Regelmäßige Pausen und Ruhetage sind wichtig, um dem Körper Zeit zur Erholung zu geben und Verletzungen zu vermeiden.",
+        "section": "Regeneration",
+        "question": "Warum sind Ruhetage wichtig?"
+        },
+        {
+        "text": "Das Training mit Höhenanpassung kann die Sauerstoffaufnahme verbessern und die Ausdauer steigern.",
+        "section": "Training",
+        "question": "Wie wirkt sich Höhentraining auf Läufer aus?"
+        },
+        {
+        "text": "Ein Lauftagebuch hilft, Fortschritte zu dokumentieren und Trainingspläne anzupassen.",
+        "section": "Training",
+        "question": "Warum sollte man ein Lauftagebuch führen?"
+        },
+        {
+        "text": "Die optimale Schrittfrequenz liegt bei etwa 170-180 Schritten pro Minute, um Überlastungen zu vermeiden.",
+        "section": "Technik",
+        "question": "Was ist die optimale Schrittfrequenz beim Laufen?"
+        },
+        {
+        "text": "Die Schuhe sollten gut belüftet sein, um Schweißfüße und Blasen zu vermeiden.",
+        "section": "Ausrüstung",
+        "question": "Wie vermeidet man Blasen beim Laufen?"
+        },
+        {
+        "text": "Regelmäßiges Krafttraining für Rumpf und Beine kann die Laufleistung verbessern und Verletzungen vorbeugen.",
+        "section": "Training",
+        "question": "Warum ist Rumpfkrafttraining für Läufer wichtig?"
+        },
+        {
+        "text": "Yoga kann die Flexibilität erhöhen und die mentale Ruhe fördern, was Läufern zugutekommt.",
+        "section": "Training",
+        "question": "Welche Vorteile hat Yoga für Läufer?"
+        },
+        {
+        "text": "Das richtige Tempo finden ist wichtig, um das Rennen effektiv durchzuhalten und das Risiko eines Leistungseinbruchs zu minimieren.",
+        "section": "Wettkämpfe",
+        "question": "Wie finde ich das richtige Renntempo?"
+        },
+        {
+        "text": "Laufschuhe sollten vor dem Kauf idealerweise abends anprobiert werden, da die Füße im Tagesverlauf anschwellen.",
+        "section": "Ausrüstung",
+        "question": "Wann ist die beste Tageszeit, um Laufschuhe anzuprobieren?"
+      },
+      {
+        "text": "Laufschuhe mit zu wenig Dämpfung können zu Gelenkschmerzen führen, besonders bei längeren Läufen.",
+        "section": "Ausrüstung",
+        "question": "Welche Folgen kann zu wenig Dämpfung bei Laufschuhen haben?"
+      },
+      {
+        "text": "Mindestens 1,5 bis 2 Liter Wasser sollte man täglich trinken, um den Flüssigkeitshaushalt auszugleichen.",
+        "section": "Ernährung",
+        "question": "Wie viel Wasser sollte man täglich trinken?"
+      },
+      {
+        "text": "Proteinshakes können nach dem Lauf helfen, die Muskelregeneration zu beschleunigen.",
+        "section": "Ernährung",
+        "question": "Wann sind Proteinshakes sinnvoll?"
+      },
+      {
+        "text": "Das Tragen von reflektierender Kleidung erhöht die Sichtbarkeit und Sicherheit beim Laufen in der Dunkelheit.",
+        "section": "Ausrüstung",
+        "question": "Wie kann ich beim Laufen im Dunkeln sicherer sein?"
+      },
+      {
+        "text": "Das Laufen in der Mittagshitze erfordert angepasste Kleidung und ausreichende Flüssigkeitszufuhr, um Hitzeschäden zu vermeiden.",
+        "section": "Training",
+        "question": "Was sollte man beim Laufen bei großer Hitze beachten?"
+      },
+      {
+        "text": "Kälte kann die Muskulatur verspannen, deshalb ist ein gründliches Aufwärmen bei kaltem Wetter besonders wichtig.",
+        "section": "Training",
+        "question": "Warum ist Aufwärmen bei Kälte wichtig?"
+      },
+      {
+        "text": "Laufschuhe sollten eine längere Einlaufzeit haben, um sich an die Füße anzupassen und Blasen zu vermeiden.",
+        "section": "Ausrüstung",
+        "question": "Warum sollte man neue Laufschuhe einlaufen?"
+      },
+      {
+        "text": "Zehenspitzenlauf kann helfen, die Fußmuskulatur zu stärken und die Lauftechnik zu verbessern.",
+        "section": "Training",
+        "question": "Was bewirkt das Laufen auf den Zehenspitzen?"
+      },
+      {
+        "text": "Hüftstabilitätstraining ist wichtig, um das Risiko von Knie- und Hüftverletzungen zu reduzieren.",
+        "section": "Training",
+        "question": "Warum ist Hüftstabilität beim Laufen wichtig?"
+      },
+      {
+        "text": "Mit GPS-Uhren kann man Strecken genau aufzeichnen und Trainingsfortschritte besser verfolgen.",
+        "section": "Ausrüstung",
+        "question": "Welche Vorteile bieten GPS-Uhren beim Laufen?"
+      },
+      {
+        "text": "Die optimale Laufzeit für Anfänger liegt oft zwischen 20 und 45 Minuten, um den Körper nicht zu überfordern.",
+        "section": "Training",
+        "question": "Wie lange sollte ein Lauf für Anfänger dauern?"
+      },
+      {
+        "text": "Eine Laufgruppe bietet soziale Unterstützung, die Motivation steigert und das Training abwechslungsreicher macht.",
+        "section": "Training",
+        "question": "Welche Vorteile hat das Laufen in einer Gruppe?"
+      },
+      {
+        "text": "Laufen kann die Knochendichte erhöhen und somit Osteoporose vorbeugen.",
+        "section": "Gesundheit",
+        "question": "Wie wirkt sich Laufen auf die Knochengesundheit aus?"
+      },
+      {
+        "text": "Bei Schmerzen sollte man sofort pausieren und gegebenenfalls einen Arzt aufsuchen, um Verletzungen zu vermeiden.",
+        "section": "Gesundheit",
+        "question": "Was sollte man tun, wenn man während des Laufens Schmerzen hat?"
+      },
+      {
+        "text": "Athletische Unterstützung wie Bandagen kann helfen, bestimmte Gelenke zu stabilisieren und Verletzungen vorzubeugen.",
+        "section": "Ausrüstung",
+        "question": "Wann sind Bandagen beim Laufen sinnvoll?"
+      },
+      {
+        "text": "Eine Laufanalyse hilft, Fehlstellungen zu erkennen und die Technik zu optimieren.",
+        "section": "Technik",
+        "question": "Was bringt eine professionelle Laufanalyse?"
+      },
+      {
+        "text": "Das Training im Gelände stärkt die Muskulatur und verbessert die Koordination.",
+        "section": "Training",
+        "question": "Welche Vorteile hat das Laufen im Gelände?"
+      },
+      {
+        "text": "Laufen kann helfen, Stress abzubauen und die Stimmung zu verbessern, da Endorphine freigesetzt werden.",
+        "section": "Gesundheit",
+        "question": "Warum ist Laufen gut für die Psyche?"
+      },
+      {
+        "text": "Die richtige Schuhgröße sollte etwa eine Daumenbreite Platz vor den Zehen lassen, um Blasen zu vermeiden.",
+        "section": "Ausrüstung",
+        "question": "Wie viel Platz sollte im Laufschuh vor den Zehen sein?"
+      },
+      {
+        "text": "Joggen und schnelles Gehen sind beide gute Ausdauertrainingsmethoden, unterscheiden sich aber in Intensität und Gelenkbelastung.",
+        "section": "Training",
+        "question": "Was ist der Unterschied zwischen Joggen und schnellem Gehen?"
+      },
+      {
+        "text": "Der sogenannte 'Tapering' bezeichnet die Trainingsphase vor einem Wettkampf, in der das Training reduziert wird, um ausgeruht zu sein.",
+        "section": "Wettkämpfe",
+        "question": "Was bedeutet Tapering?"
+      },
+      {
+        "text": "Laufen verbessert die Herz-Kreislauf-Gesundheit durch Stärkung des Herzens und Senkung des Blutdrucks.",
+        "section": "Gesundheit",
+        "question": "Wie verbessert Laufen die Herzgesundheit?"
+      },
+      {
+        "text": "Der sogenannte 'Platzregen' (oder Seitenstechen) entsteht durch Muskelkrämpfe im Zwerchfell und lässt sich durch kontrollierte Atmung lindern.",
+        "section": "Gesundheit",
+        "question": "Was hilft gegen Seitenstechen beim Laufen?"
+      },
+      {
+        "text": "Laufschuhe sollten immer paarweise getragen werden, da sie sich unterschiedlich abnutzen können.",
+        "section": "Ausrüstung",
+        "question": "Sollte man immer das gleiche Paar Laufschuhe benutzen?"
+      },
+      {
+        "text": "Ein Warm-down nach dem Lauf hilft, die Herzfrequenz langsam zu senken und Muskelkater zu reduzieren.",
+        "section": "Regeneration",
+        "question": "Warum ist ein Cool-down nach dem Lauf wichtig?"
+      },
+      {
+        "text": "Die richtige Laufbekleidung sollte den Schweiß nach außen transportieren und schnell trocknen.",
+        "section": "Ausrüstung",
+        "question": "Welche Eigenschaften sollte Laufbekleidung haben?"
+      },
+      {
+        "text": "Das Laufen auf der Mittelfußsohle wird oft als gesünder und effizienter angesehen als das Fersenlaufen.",
+        "section": "Technik",
+        "question": "Welche Lauftechnik ist gesünder: Mittelfuß- oder Fersenlauf?"
+      },
+      {
+        "text": "Eine gesunde Körperhaltung beim Laufen hilft, Energie zu sparen und Verletzungen zu vermeiden.",
+        "section": "Technik",
+        "question": "Warum ist die Körperhaltung beim Laufen wichtig?"
+      },
+      {
+        "text": "Bei Frost sollte man auf mehrere dünne Kleidungsschichten setzen, um flexibel auf Temperaturänderungen reagieren zu können.",
+        "section": "Ausrüstung",
+        "question": "Wie kleidet man sich beim Laufen im Winter richtig?"
+      },
+      {
+        "text": "Ausreichend Schlaf ist entscheidend für die Regeneration und Leistungsfähigkeit von Läufern.",
+        "section": "Regeneration",
+        "question": "Warum ist Schlaf für Läufer wichtig?"
+      },
+      {
+        "text": "Der Laufstil kann durch Videoanalyse verbessert werden, um Fehlbelastungen zu vermeiden.",
+        "section": "Technik",
+        "question": "Wie kann man seinen Laufstil verbessern?"
+      },
+      {
+        "text": "Laufschuhe mit guter Dämpfung sind besonders für Läufer mit Knieproblemen geeignet.",
+        "section": "Ausrüstung",
+        "question": "Welche Laufschuhe eignen sich bei Knieproblemen?"
+      },
+      {
+        "text": "Das sogenannte 'Carb-Loading' bezeichnet die Kohlenhydratspeicherung vor langen Wettkämpfen.",
+        "section": "Ernährung",
+        "question": "Was bedeutet Carb-Loading?"
+      },
+      {
+        "text": "Barfußlaufen fördert die Fußmuskulatur, sollte aber langsam aufgebaut werden, um Verletzungen zu vermeiden.",
+        "section": "Training",
+        "question": "Wie beginnt man mit Barfußlaufen sicher?"
+      },
+      {
+        "text": "Das richtige Tempo beim Dauerlauf sollte so gewählt werden, dass man sich noch gut unterhalten kann.",
+        "section": "Training",
+        "question": "Wie schnell sollte man beim Dauerlauf laufen?"
+      },
+      {
+        "text": "Laufschuhe sollten regelmäßig gereinigt und getrocknet werden, um Bakterien und Gerüche zu vermeiden.",
+        "section": "Ausrüstung",
+        "question": "Wie pflegt man seine Laufschuhe richtig?"
+        },
+        {
+        "text": "Intervalltraining steigert die anaerobe Kapazität und verbessert die Schnelligkeit.",
+        "section": "Training",
+        "question": "Was bringt Intervalltraining beim Laufen?"
+        },
+        {
+        "text": "Mentaltraining kann Läufern helfen, die Motivation zu steigern und Wettkampfangst zu reduzieren.",
+        "section": "Training",
+        "question": "Wie hilft Mentaltraining Läufern?"
+        },
+        {
+        "text": "Der Lauftreff bietet eine gute Gelegenheit, neue Laufpartner kennenzulernen und sich auszutauschen.",
+        "section": "Training",
+        "question": "Was ist ein Lauftreff?"
+        },
+        {
+        "text": "Stretching sollte eher nach dem Lauf erfolgen, da es vor dem Laufen die Muskulatur zu stark entspannen kann.",
+        "section": "Regeneration",
+        "question": "Wann ist Stretching sinnvoll?"
+        },
+        {
+        "text": "Lauf-Apps helfen, Trainingspläne zu erstellen und den Fortschritt zu dokumentieren.",
+        "section": "Ausrüstung",
+        "question": "Wie können Lauf-Apps das Training unterstützen?"
+        },
+        {
+        "text": "Das Laufen im Intervall kann den Stoffwechsel anregen und Fettverbrennung fördern.",
+        "section": "Training",
+        "question": "Wie unterstützt Intervalltraining die Fettverbrennung?"
+        },
+        {
+        "text": "Laufschuhe mit Pronationsstütze helfen Läufern mit Überpronation, Verletzungen vorzubeugen.",
+        "section": "Ausrüstung",
+        "question": "Was sind Pronationsstützen in Laufschuhen?"
+        },
+        {
+        "text": "Zielsetzung ist wichtig, um das Training strukturiert und motiviert durchzuführen.",
+        "section": "Training",
+        "question": "Warum sind Ziele beim Lauftraining wichtig?"
+        },
+        {
+        "text": "Mindestens einmal im Jahr sollte man seine Lauftechnik überprüfen lassen, um Fehler zu korrigieren.",
+        "section": "Technik",
+        "question": "Wie oft sollte man die Lauftechnik überprüfen?"
+        },
+        {
+        "text": "Der Laufstil ist sehr individuell und sollte an den eigenen Körper angepasst werden.",
+        "section": "Technik",
+        "question": "Ist es sinnvoll, den Laufstil komplett zu verändern?"
+        },
+        {
+        "text": "Laufen kann das Immunsystem stärken und die Anfälligkeit für Krankheiten reduzieren.",
+        "section": "Gesundheit",
+        "question": "Wie beeinflusst Laufen das Immunsystem?"
+        }
+    ]
+  }
+]
