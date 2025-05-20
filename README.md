@@ -71,6 +71,18 @@ docker run -it \
     docker.elastic.co/elasticsearch/elasticsearch:9.0.1
 '''
 
+```bash
+docker run -it \
+    --rm \
+    --name elasticsearch \
+    -p 9200:9200 \
+    -p 9300:9300 \
+    -v elasticsearch_data:/usr/share/elasticsearch/data \
+    -e "discovery.type=single-node" \
+    -e "xpack.security.enabled=false" \
+    docker.elastic.co/elasticsearch/elasticsearch:9.0.1
+```
+
 Do make sure that the needed ports 9200 and 9300 are running
 '''bash
 curl http://localhost:9200
@@ -97,6 +109,12 @@ To run Elasticsearch and ollama in docker:
 '''bash
 docker-compose up
 '''
+
+docker run -it \
+    -v ollama:/root/.ollama \
+    -p 11434:11434 \
+    --name ollama \
+    ollama/ollama
 
 Load the model
 '''bash
