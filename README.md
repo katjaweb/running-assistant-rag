@@ -49,7 +49,9 @@ pipenv shell
 
 **Set Your OpenAI API Key**
 
-Export your OpenAI API key as an environment variable:
+To use the RAG application, you need an OpenAI API key. You can create one in your OpenAI account dashboard.
+
+Once created, export the key as an environment variable:
 
 ```bash
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
@@ -75,3 +77,5 @@ make running_assistant
 
 This will automatically open a new page in your web browser.
 There, you can enter your questions and receive context-based answers related to running.
+
+![rag-app](./images/rag-app.png)
