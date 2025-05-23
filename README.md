@@ -65,8 +65,6 @@ Populate the `running-questions` index in Elasticsearch with structured document
 make es_indexing
 ```
 
-Note: The indexed FAQ content was generated using the GPT-4o model
-
 **Launch the Running Assistant App**
 
 Start the Streamlit-based interface for your personal running assistant:
