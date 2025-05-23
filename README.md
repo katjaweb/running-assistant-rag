@@ -1,5 +1,7 @@
 # Running Assistant – A Retrieval-Augmented Generation (RAG) App for Running-Related Questions
 
+![running](./images/running-6660187_640.jpg)
+
 This project is a Retrieval-Augmented Generation (RAG) chatbot designed to assist users with questions related to running and training. It provides information on running techniques, training plans, recovery strategies, and more. The application is intended for demonstration and experimentation purposes and serves as an interactive FAQ or personal coach for runners.
 
 The Running Assistant App for Running-Related Questions implements a Streamlit-based personal running assistant that answers user questions by combining document retrieval with generative AI. It includes the following components:
@@ -10,7 +12,7 @@ The Running Assistant App for Running-Related Questions implements a Streamlit-b
 - Orchestrates the full RAG pipeline — from retrieval to answer generation.
 - Provides an interactive interface via a Streamlit web app for interacting with the assistant.
 
-The FAQ documents used in the search index were created using the GPT-4o model.
+The underlying FAQ document used for retrieval is written in German and were created using the GPT-4o model.
 
 # Get started
 
