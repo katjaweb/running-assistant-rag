@@ -1,126 +1,75 @@
-# running-assistant-rag
-A Retrieval-Augmented Generation (RAG) chatbot focused on running and training. This project aims to answer questions about running techniques, training plans, recovery, and more. Built for demonstration and experimentation.
+# Running Assistant – A Retrieval-Augmented Generation (RAG) App for Running-Related Questions
 
-Download Anaconda for Linux
-in workspaces installienern, nicht in workspaces/running-assistant-rag
-cd..
-'''bash
-curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
-'''
+This project is a Retrieval-Augmented Generation (RAG) chatbot designed to assist users with questions related to running and training. It provides information on running techniques, training plans, recovery strategies, and more. The application is intended for demonstration and experimentation purposes and serves as an interactive FAQ or personal coach for runners.
 
-Install Ananconda:
-cd /workspaces
-'''bash
-bash Anaconda3-2024.10-1-Linux-x86_64.sh
-'''
+The Running Assistant App for Running-Related Questions implements a Streamlit-based personal running assistant that answers user questions by combining document retrieval with generative AI. It includes the following components:
 
-with anaconda, you don't need to install jupyter, pandas, tqdm, scikit-learn
+- Retrieves relevant FAQ entries from an Elasticsearch index based on the user's query.
+- Builds a prompt by combining the retrieved documents with the user's question.
+- Sends the prompt to the GPT-4o language model to generate a coherent response.
+- Orchestrates the full RAG pipeline — from retrieval to answer generation.
+- Provides an interactive interface via a Streamlit web app for interacting with the assistant.
 
-install elasticsearch and openai
-'''bash
-pip install elasticsearch openai
-'''
+The FAQ documents used in the search index were created using the GPT-4o model.
 
-Installed numpy 1.26.4 instead of 2.2.4 due to an error while importing elaticsearch
+# Get started
 
-Setup ollama by running this command:
-'''bash
-curl -fsSL https://ollama.com/install.sh | sh
-'''
+Follow these steps to set up and run the Running Assistant App:
 
-# Ollama
+**Install dependencies**
 
-for more information how to download for windows and MacOS visit github repo: https://github.com/ollama/ollama
-
-For starting the server
-'''bash
-ollama start
-'''
-
-To run and chat with phi4-mini
-'''bash
-ollama run phi4-mini
-'''
-
-'''bash
-ollama run phi4-mini
-'''
-
-Connecting to OpenAI API:
-'''bash
-from openai import OpenAI
-
-client = OpenAI(
-    base_url='http://localhost:11434/v1/',
-    api_key='ollama',
-)
-'''
-
-# Elasticsearch
-
-Running ElasticSearch:
-'''bash
-docker run -it \
-    --rm \
-    --name elasticsearch \
-    -m 4GB \
-    -p 9200:9200 \
-    -p 9300:9300 \
-    -e "discovery.type=single-node" \
-    -e "xpack.security.enabled=false" \
-    docker.elastic.co/elasticsearch/elasticsearch:9.0.1
-'''
+Use `make setup` to install `pipenv` and all required Python packages:
 
 ```bash
-docker run -it \
-    --rm \
-    --name elasticsearch \
-    -p 9200:9200 \
-    -p 9300:9300 \
-    -v elasticsearch_data:/usr/share/elasticsearch/data \
-    -e "discovery.type=single-node" \
-    -e "xpack.security.enabled=false" \
-    docker.elastic.co/elasticsearch/elasticsearch:9.0.1
+make setup
 ```
 
-Do make sure that the needed ports 9200 and 9300 are running
-'''bash
+**Launch a local Elasticsearch container using Docker**
+
+```bash
+make run_elasticsearch
+```
+
+Wait a few seconds for Elasticsearch to fully initialize before continuing.
+You can test if it’s running with:
+
+```bash
 curl http://localhost:9200
+```
 
-Index settings:
-'''bash
-{
-    "settings": {
-        "number_of_shards": 1,
-        "number_of_replicas": 0
-    },
-    "mappings": {
-        "properties": {
-            "text": {"type": "text"},
-            "section": {"type": "text"},
-            "question": {"type": "text"},
-            "course": {"type": "keyword"} 
-        }
-    }
-}
-'''
+**Activate Python Environment**
 
-To run Elasticsearch and ollama in docker:
-'''bash
-docker-compose up
-'''
+Enter the virtual environment created by `pipenv`:
 
-docker run -it \
-    -v ollama:/root/.ollama \
-    -p 11434:11434 \
-    --name ollama \
-    ollama/ollama
+```bash
+pipenv shell
+```
 
-Load the model
-'''bash
-docker exec -it ollama bash
-'''
+**Set Your OpenAI API Key**
 
-and then
-'''bash
-ollama pull phi4-mini
+Export your OpenAI API key as an environment variable:
+
+```bash
+export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
+```
+
+**Index Running FAQ Documents**
+
+Populate the `running-questions` index in Elasticsearch with structured documents:
+
+```bash
+make es_indexing
+```
+
+Note: The indexed FAQ content was generated using the GPT-4o model
+
+**Launch the Running Assistant App**
+
+Start the Streamlit-based interface for your personal running assistant:
+
+```bash
+make running_assistant
+```
+
+This will automatically open a new page in your web browser.
+There, you can enter your questions and receive context-based answers related to running.
