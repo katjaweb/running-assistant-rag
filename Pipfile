@@ -12,6 +12,7 @@ dotenv = "*"
 streamlit = "*"
 make = "*"
 tqdm = "==4.67.1"
+sentence-transformers = "*"
 
 [dev-packages]
 pylint = "*"
