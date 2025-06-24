@@ -17,60 +17,50 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-from elasticsearch import Elasticsearch
+# from elasticsearch import Elasticsearch
+# from sentence_transformers import SentenceTransformer
+from qdrant_client import QdrantClient, models
 from openai import OpenAI
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
+qd_client = QdrantClient("http://localhost:6333")
+# EMBEDDING_DIMENSIONALITY = 512
+MODEL_HANDLE = "jinaai/jina-embeddings-v2-small-en"
+COLLECTION_NAME = "running-faq"
 
-es_client = Elasticsearch('http://localhost:9200')
+# index_name = "running-questions"
 
 
-def elastic_search(query, index_name = "running-questions"):
+def vector_search(question):
     """
-    Performs a search in the specified Elasticsearch index and returns relevant documents.
+    Performs a vector similarity search in the Qdrant collection using the given question.
 
-    The search uses a weighted multi-field match on the fields 'question', 'text', and 'section', 
-    with an additional filter to include only documents related to the 'running-assistant-rag'
-    course.
-
-    Args:
-        query (str): The search query string.
-        index_name (str, optional): The name of the Elasticsearch index. Defaults to
-        'running-questions'.
-
-    Returns:
-        list[dict]: A list of documents (as dictionaries) that match the search criteria.
+    Embeds the input question using the specified model and retrieves the top 5 most similar
+    documents from the 'running-faq' collection based on cosine similarity. Returns a list
+    of payloads (metadata and content) from the matched documents.
     """
-    search_query = {
-        "size": 5,
-        "query": {
-            "bool": {
-                "must": {
-                    "multi_match": {
-                        "query": query,
-                        "fields": ["question^3", "text", "section"],
-                        "type": "best_fields"
-                    }
-                },
-                "filter": {
-                    "term": {
-                        "course": "running-assistant-rag"
-                    }
-                }
-            }
-        }
-    }
+    print('vector_search is used')
 
-    response = es_client.search(index=index_name, body=search_query)
+    query_points = qd_client.query_points(
+        collection_name=COLLECTION_NAME,
+        query=models.Document(
+            text=question,
+            model=MODEL_HANDLE
+        ),
+        limit=5,
+        with_payload=True
+    )
 
-    result_docs = []
+    results = []
 
-    for hit in response['hits']['hits']:
-        result_docs.append(hit['_source'])
+    for point in query_points.points:
+        results.append(point.payload)
 
-    return result_docs
+    print(results)
+
+    return results
 
 
 def build_prompt(query, search_results):
@@ -158,7 +148,7 @@ def rag_pipeline(query):
     Returns:
         str: The generated answer based on retrieved context and the language model's response.
     """
-    context_docs = elastic_search(query)
+    context_docs = vector_search(query)
     prompt = build_prompt(query, context_docs)
     answer = llm(prompt)
     return answer

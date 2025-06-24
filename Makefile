@@ -13,6 +13,14 @@ run_elasticsearch:
 es_indexing:
 	pipenv run python es_indexing.py
 
+run_qdrant:
+	docker run -p 6333:6333 -p 6334:6334 \
+   -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
+   qdrant/qdrant
+
+qdrant_indexing:
+	pipenv run python qdrant_indexing.py
+
 running_assistant:
 	pipenv run streamlit run running_rag.py
 
