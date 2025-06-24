@@ -6,7 +6,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot designed to assis
 
 The Running Assistant App for Running-Related Questions implements a Streamlit-based personal running assistant that answers user questions by combining document retrieval with generative AI. It includes the following components:
 
-- Retrieves relevant FAQ entries from an Elasticsearch index based on the user's query.
+- Retrieves relevant FAQ entries from a Qdrant vector collection based on the user's query.
 - Builds a prompt by combining the retrieved documents with the user's question.
 - Sends the prompt to the GPT-4o language model to generate a coherent response.
 - Orchestrates the full RAG pipeline — from retrieval to answer generation.
@@ -24,19 +24,6 @@ Use `make setup` to install `pipenv` and all required Python packages:
 
 ```bash
 make setup
-```
-
-**Launch a local Elasticsearch container using Docker**
-
-```bash
-make run_elasticsearch
-```
-
-Wait a few seconds for Elasticsearch to fully initialize before continuing.
-You can test if it’s running with:
-
-```bash
-curl http://localhost:9200
 ```
 
 **Activate Python Environment**
@@ -57,13 +44,46 @@ Once created, export the key as an environment variable:
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
 ```
 
-**Index Running FAQ Documents**
+## Vector Search with Qdrant
 
-Populate the `running-questions` index in Elasticsearch with structured documents:
+This project uses Qdrant as a vector database to enable semantic search over running-related FAQ documents. Qdrant handles both indexing and similarity search in a single engine optimized for embeddings.
+
+If you run Qdrant the first time, download the Qdrant Docker image. This only needs to be done once.
 
 ```bash
-make es_indexing
+docker pull qdrant/qdrant
 ```
+
+You can launch a local Qdrant container using Docker
+
+```bash
+make run_qdrant
+```
+
+Wait a few seconds for Qdrant to fully initialize before continuing.
+You can test if it’s running with:
+
+```bash
+curl http://localhost:6333
+```
+
+**Index Running FAQ Documents**
+
+Populate the `running-questions` collection in Qdrant with structured documents:
+
+```bash
+make qdrant_indexing
+```
+
+This step initializes a local Qdrant vector database collection and populates it with embeddings generated from running-related question-answer documents. The documents are loaded from `documents.json`, and embedded using the `jinaai/jina-embeddings-v2-small-en` model.
+
+The script performs the following:
+
+- Deletes any existing running-faq collection.
+- Creates a new collection configured for cosine similarity.
+- Embeds and indexes all documents into Qdrant for efficient vector-based search.
+
+Ensure Qdrant is running locally on `http://localhost:6333` before executing this step.
 
 **Launch the Running Assistant App**
 
