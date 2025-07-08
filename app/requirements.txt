@@ -1,0 +1,10 @@
+streamlit
+qdrant-client==1.14.3
+fastembed==0.7.1
+psycopg2-binary==2.9.10
+python-dotenv
+openai==1.82.0
+numpy==2.3.1
+
+--find-links https://download.pytorch.org/whl/cpu/torch_stable.html
+torch==2.3.1+cpu
