@@ -14,10 +14,13 @@ make = "*"
 tqdm = "==4.67.1"
 sentence-transformers = "*"
 qdrant-client = {extras = ["fastembed"], version = ">=1.14.2"}
+seaborn = "*"
+psycopg2 = "*"
 
 [dev-packages]
 pylint = "*"
 black = "*"
+pgcli = "*"
 
 [requires]
 python_version = "3.12"
