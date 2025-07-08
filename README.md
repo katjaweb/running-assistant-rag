@@ -26,6 +26,7 @@ The underlying FAQ document used for retrieval were created using the GPT-4o mod
 
 **Project structure**
 
+```text
 .
 ├── app/                     # Streamlit app and backend
 │   ├── app.py               # Streamlit UI and logic
@@ -49,6 +50,7 @@ The underlying FAQ document used for retrieval were created using the GPT-4o mod
 ├── Pipfile
 ├── Pipfile.lock
 └── README.md
+```
 
 # System Architecture
 
@@ -86,7 +88,13 @@ Set your OpenAi API Key.
 
 To use the RAG application, you need an OpenAI API key. You can create one in your OpenAI account dashboard.
 
-Once created, export the key as an environment variable:
+Once created, set your key in .env file
+
+```bash
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+```
+
+or export the key as an environment variable.
 
 ```bash
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
@@ -223,7 +231,7 @@ To access the application:
 
 Enter a question and click "Ask" to get an answer. Use the +1 / -1 buttons to provide feedback on the response. Browse recent conversations and monitor feedback stats directly within the app.
 
-![streamlit-app](./images/streamlit-app.png)
+![streamlit-app](./images/streamlit_app.png)
 
 **Generate Test Data**
 
