@@ -19,7 +19,7 @@ run_qdrant:
    qdrant/qdrant
 
 qdrant_indexing:
-	pipenv run python qdrant_indexing.py
+	pipenv run python app/prep_db.py
 
 running_assistant:
 	pipenv run streamlit run running_rag.py
