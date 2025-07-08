@@ -1,0 +1,497 @@
+[
+  {
+    "course": "running-assistant-rag",
+    "documents": [
+      {
+        "text": "Interval training is a training method in which phases of intense effort alternate with recovery phases. This alternation between high and low intensity effectively improves endurance and speed, as the body is challenged both anaerobically and aerobically.",
+        "section": "Training",
+        "question": "What is interval training?"
+      },
+      {
+        "text": "Long, slow runs are a central component of endurance training. They help improve basic endurance, strengthen the cardiovascular system, and increase the body's ability to burn fat. These runs also help prepare muscles and tendons for longer periods of exertion.",
+        "section": "Training",
+        "question": "What are long, slow runs good for?"
+      },
+      {
+        "text": "Recovery is an essential part of the training process. During recovery phases, the body can recover from training stimuli, repair muscle tissue, and adapt to the exertion. Without sufficient recovery, the risk of injury, overuse, and decreased performance increases.",
+        "section": "Recovery",
+        "question": "Why is recovery important in running?"
+      },
+      {
+        "text": "Hydration is very important when running, as the body loses a lot of water through sweating. Inadequate hydration can lead to dehydration, which in turn can cause fatigue, cramps, and decreased performance. Therefore, you should drink regularly before, during, and after training.",
+        "section": "Nutrition and Hydration",
+        "question": "Why is hydration important when running?"
+      },
+      {
+        "text": "Overtraining occurs when training volume or intensity is too high and recovery time is too short. Typical symptoms include persistent fatigue, decreased performance, sleep disturbances, and increased susceptibility to injury. It is important to recognize the body's warning signs and respond accordingly.",
+        "section": "Health",
+        "question": "How can you recognize overtraining?"
+      },
+      {
+        "text": "The optimal running shoe should fit well, provide sufficient cushioning, and match your running style to help prevent injuries.",
+        "section": "Equipment",
+        "question": "How do I find the right running shoe?"
+      },
+      {
+        "text": "A balanced diet with sufficient carbohydrates, proteins, and fats supports performance and recovery in running.",
+        "section": "Nutrition",
+        "question": "What role does nutrition play in running?"
+      },
+      {
+        "text": "Warming up before a run prepares the body for exertion and reduces the risk of injury by increasing blood flow and mobilizing the joints.",
+        "section": "Training",
+        "question": "Why is warming up important?"
+      },
+      {
+        "text": "Stretching after a run promotes flexibility and supports recovery, but it should not be too intense or static before running.",
+        "section": "Training",
+        "question": "Should you stretch before or after running?"
+      },
+      {
+        "text": "Tempo runs are runs at a faster but controlled pace that help increase the anaerobic threshold and improve running speed.",
+        "section": "Training",
+        "question": "What are tempo runs?"
+      },
+      {
+        "text": "The heart rate zone for endurance training typically lies between 60–80% of the maximum heart rate and promotes fat burning and cardiovascular health.",
+        "section": "Training",
+        "question": "In which heart rate zone should you train for endurance?"
+      },
+      {
+        "text": "Barefoot running strengthens the foot muscles and can improve running technique, but it should be introduced slowly and carefully.",
+        "section": "Training",
+        "question": "What are the benefits of barefoot running?"
+      },
+      {
+        "text": "A marathon is a long-distance run of 42.195 kilometers and requires targeted endurance training as well as proper preparation.",
+        "section": "Competitions",
+        "question": "How long is a marathon?"
+      },
+      {
+        "text": "Optimal running technique includes an upright posture, short ground contact times, and active foot movement to run more efficiently and injury-free.",
+        "section": "Technique",
+        "question": "What characterizes good running technique?"
+      },
+      {
+        "text": "A training plan should be tailored to individual goals, fitness level, and available time, and include a mix of endurance, strength, and technique training.",
+        "section": "Training",
+        "question": "What should a good training plan for runners look like?"
+      },
+      {
+        "text": "Strength training supports runners by strengthening muscles, improving stability, and preventing injuries.",
+        "section": "Training",
+        "question": "Why is strength training important for runners?"
+      },
+      {
+        "text": "Running shoes should be selected based on foot type and running style, e.g., stability shoes for overpronators or neutral shoes for runners with normal arches.",
+        "section": "Equipment",
+        "question": "Which running shoes are suitable for overpronators?"
+      },
+      {
+        "text": "Running economy describes how efficiently a runner uses energy; better running economy means running faster with the same effort.",
+        "section": "Training",
+        "question": "What is running economy?"
+      },
+      {
+        "text": "Race preparation involves gradually increasing training intensity, allowing sufficient recovery, and adjusting nutrition before the race.",
+        "section": "Competitions",
+        "question": "How do you prepare optimally for a race?"
+      },
+      {
+        "text": "Running on asphalt puts more stress on the joints than running on soft forest trails, but asphalt routes are often easier to plan and faster.",
+        "section": "Training",
+        "question": "What are the pros and cons of running on asphalt?"
+      },
+      {
+        "text": "Proper breathing while running supports oxygen supply and can help prevent fatigue; it is often recommended to breathe through both the nose and mouth.",
+        "section": "Technique",
+        "question": "How should you breathe while running?"
+      },
+      {
+        "text": "A heart rate monitor can help manage training, measure progress, and prevent overexertion.",
+        "section": "Equipment",
+        "question": "What are the benefits of using a heart rate monitor for runners?"
+      },
+      {
+        "text": "Stretching should be done after running to promote flexibility, while dynamic warm-ups are more appropriate before a run.",
+        "section": "Training",
+        "question": "When is stretching useful for runners?"
+      },
+      {
+        "text": "Trail running involves running on unpaved paths and requires special shoes as well as increased attention to technique and safety.",
+        "section": "Training",
+        "question": "What is trail running?"
+      },
+      {
+        "text": "Fartlek training combines fast and slow running phases and improves both endurance and speed.",
+        "section": "Training",
+        "question": "What is fartlek training?"
+      },
+      {
+        "text": "Carbohydrates are the main source of energy for running, while proteins are primarily important for muscle recovery.",
+        "section": "Nutrition",
+        "question": "What role do carbohydrates and proteins play in running?"
+      },
+      {
+        "text": "Overuse injuries can be caused by rapid increases in training intensity, poor technique, or inappropriate shoes, and should be addressed early.",
+        "section": "Health",
+        "question": "What are common causes of overuse injuries in running?"
+      },
+      {
+        "text": "Cross-training with cycling or swimming can help runners maintain fitness and prevent injuries.",
+        "section": "Training",
+        "question": "What are the benefits of cross-training for runners?"
+      },
+      {
+        "text": "Running drills (running ABCs) include exercises that improve running technique, coordination, and mobility.",
+        "section": "Training",
+        "question": "What is running ABC (drills)?"
+      },
+      {
+        "text": "A tempo run is a run at a consistently faster pace that trains the anaerobic threshold.",
+        "section": "Training",
+        "question": "What is a tempo run?"
+      },
+      {
+        "text": "Plyometric training improves explosive strength and can positively impact running performance.",
+        "section": "Training",
+        "question": "How can plyometric training help runners?"
+      },
+      {
+        "text": "Proper pre-race nutrition should be high in carbohydrates and easy to digest to provide energy and prevent stomach issues.",
+        "section": "Nutrition",
+        "question": "How should you eat before a race?"
+      },
+      {
+        "text": "Running shoes should be replaced every 500–800 kilometers, as cushioning and stability deteriorate over time.",
+        "section": "Equipment",
+        "question": "When should you replace your running shoes?"
+      },
+      {
+        "text": "A natural running style avoids overpronation and promotes efficient running movement.",
+        "section": "Technique",
+        "question": "What is meant by natural running style?"
+      },
+      {
+        "text": "Races should be integrated into the training plan to boost motivation and set training goals.",
+        "section": "Competition",
+        "question": "Why are races important for runners?"
+      },
+      {
+        "text": "Running can improve mental health, reduce stress, and enhance overall well-being.",
+        "section": "Health",
+        "question": "How does running affect mental health?"
+      },
+      {
+        "text": "Regular running analysis can help improve technique and prevent injuries.",
+        "section": "Technique",
+        "question": "How can running analysis help runners?"
+      },
+      {
+        "text": "Running in a group can boost motivation and provide social interaction.",
+        "section": "Training",
+        "question": "What are the benefits of group running?"
+      },
+      {
+        "text": "Energy gels and sports drinks can help replenish energy stores and maintain hydration during long runs.",
+        "section": "Nutrition",
+        "question": "When are energy gels and sports drinks useful?"
+      },
+      {
+        "text": "Proper running clothing should be breathable, lightweight, and appropriate for the weather conditions.",
+        "section": "Equipment",
+        "question": "What features should running clothing have?"
+      },
+      {
+        "text": "Wearing compression socks can promote blood circulation and support recovery.",
+        "section": "Health",
+        "question": "What are the benefits of compression socks for runners?"
+      },
+      {
+        "text": "Running on uneven terrain strengthens muscles and improves coordination.",
+        "section": "Training",
+        "question": "What are the benefits of running on uneven terrain?"
+      },
+      {
+        "text": "Regular breaks and rest days are important to give the body time to recover and prevent injuries.",
+        "section": "Recovery",
+        "question": "Why are rest days important?"
+      },
+      {
+        "text": "Altitude training can improve oxygen uptake and increase endurance.",
+        "section": "Training",
+        "question": "How does altitude training affect runners?"
+      },
+      {
+        "text": "Keeping a running journal helps document progress and adjust training plans.",
+        "section": "Training",
+        "question": "Why should you keep a running journal?"
+      },
+      {
+        "text": "The optimal cadence is around 170–180 steps per minute to avoid overuse injuries.",
+        "section": "Technique",
+        "question": "What is the optimal running cadence?"
+      },
+      {
+        "text": "Shoes should be well-ventilated to prevent sweaty feet and blisters.",
+        "section": "Equipment",
+        "question": "How can you prevent blisters while running?"
+      },
+      {
+        "text": "Regular strength training for the core and legs can improve running performance and help prevent injuries.",
+        "section": "Training",
+        "question": "Why is core strength training important for runners?"
+      },
+      {
+        "text": "Yoga can increase flexibility and promote mental calmness, which benefits runners.",
+        "section": "Training",
+        "question": "What are the benefits of yoga for runners?"
+      },
+      {
+        "text": "Finding the right pace is important to complete a race effectively and minimize the risk of performance drop-off.",
+        "section": "Competition",
+        "question": "How do you find the right race pace?"
+      },
+      {
+        "text": "Running shoes should ideally be tried on in the evening, as feet tend to swell throughout the day.",
+        "section": "Equipment",
+        "question": "What is the best time of day to try on running shoes?"
+      },
+      {
+        "text": "Running shoes with insufficient cushioning can lead to joint pain, especially during longer runs.",
+        "section": "Equipment",
+        "question": "What are the consequences of insufficient cushioning in running shoes?"
+      },
+      {
+        "text": "You should drink at least 1.5 to 2 liters of water per day to maintain proper hydration.",
+        "section": "Nutrition",
+        "question": "How much water should you drink daily?"
+      },
+      {
+        "text": "Protein shakes can help speed up muscle recovery after running.",
+        "section": "Nutrition",
+        "question": "When are protein shakes useful?"
+      },
+      {
+        "text": "Wearing reflective clothing increases visibility and safety when running in the dark.",
+        "section": "Equipment",
+        "question": "How can I stay safe while running in the dark?"
+      },
+      {
+        "text": "Running in midday heat requires appropriate clothing and sufficient hydration to avoid heat-related issues.",
+        "section": "Training",
+        "question": "What should you consider when running in hot weather?"
+      },
+      {
+        "text": "Cold weather can tense up muscles, so thorough warm-ups are especially important when it's cold.",
+        "section": "Training",
+        "question": "Why is warming up important in cold weather?"
+      },
+      {
+        "text": "Running shoes should be broken in over time to adapt to your feet and prevent blisters.",
+        "section": "Equipment",
+        "question": "Why should you break in new running shoes?"
+      },
+      {
+        "text": "Toe running can help strengthen foot muscles and improve running technique.",
+        "section": "Training",
+        "question": "What is the effect of running on your toes?"
+      },
+      {
+        "text": "Hip stability training is important to reduce the risk of knee and hip injuries.",
+        "section": "Training",
+        "question": "Why is hip stability important for runners?"
+      },
+      {
+        "text": "GPS watches allow you to accurately track routes and better monitor training progress.",
+        "section": "Equipment",
+        "question": "What are the benefits of GPS watches for running?"
+      },
+      {
+        "text": "The optimal running duration for beginners is often between 20 and 45 minutes to avoid overstraining the body.",
+        "section": "Training",
+        "question": "How long should a run be for beginners?"
+      },
+      {
+        "text": "A running group provides social support, increases motivation, and makes training more varied.",
+        "section": "Training",
+        "question": "What are the benefits of running in a group?"
+      },
+      {
+        "text": "Running can increase bone density and help prevent osteoporosis.",
+        "section": "Health",
+        "question": "How does running affect bone health?"
+      },
+      {
+        "text": "If you experience pain while running, you should stop immediately and consult a doctor if necessary to avoid injuries.",
+        "section": "Health",
+        "question": "What should you do if you feel pain while running?"
+      },
+      {
+        "text": "Athletic supports like braces can help stabilize joints and prevent injuries.",
+        "section": "Equipment",
+        "question": "When are braces useful for running?"
+      },
+      {
+        "text": "A running analysis helps identify misalignments and optimize running technique.",
+        "section": "Technique",
+        "question": "What are the benefits of a professional running analysis?"
+      },
+      {
+        "text": "Trail running strengthens muscles and improves coordination.",
+        "section": "Training",
+        "question": "What are the benefits of trail running?"
+      },
+      {
+        "text": "Running can help reduce stress and improve mood by releasing endorphins.",
+        "section": "Health",
+        "question": "Why is running good for mental well-being?"
+      },
+      {
+        "text": "The correct shoe size should allow about a thumb's width of space in front of the toes to prevent blisters.",
+        "section": "Equipment",
+        "question": "How much space should there be in front of the toes in running shoes?"
+      },
+      {
+        "text": "Jogging and brisk walking are both effective endurance training methods, but they differ in intensity and joint impact.",
+        "section": "Training",
+        "question": "What is the difference between jogging and brisk walking?"
+      },
+      {
+        "text": "The term 'tapering' refers to the training phase before a race during which the training volume is reduced to ensure full recovery.",
+        "section": "Races",
+        "question": "What does tapering mean?"
+      },
+      {
+        "text": "Running improves cardiovascular health by strengthening the heart and lowering blood pressure.",
+        "section": "Health",
+        "question": "How does running improve heart health?"
+      },
+      {
+        "text": "So-called 'side stitches' are caused by muscle cramps in the diaphragm and can be eased through controlled breathing.",
+        "section": "Health",
+        "question": "What helps against side stitches while running?"
+      },
+      {
+        "text": "Running shoes should always be worn as a pair because they may wear down differently.",
+        "section": "Equipment",
+        "question": "Should you always use the same pair of running shoes?"
+      },
+      {
+        "text": "A warm-down after a run helps gradually lower heart rate and reduce muscle soreness.",
+        "section": "Recovery",
+        "question": "Why is a cool-down important after running?"
+      },
+      {
+        "text": "Proper running clothing should wick sweat away from the body and dry quickly.",
+        "section": "Equipment",
+        "question": "What characteristics should running clothes have?"
+      },
+      {
+        "text": "Midfoot running is often considered healthier and more efficient than heel striking.",
+        "section": "Technique",
+        "question": "Which running technique is healthier: midfoot or heel strike?"
+      },
+      {
+        "text": "A healthy posture while running helps conserve energy and prevent injuries.",
+        "section": "Technique",
+        "question": "Why is posture important while running?"
+      },
+      {
+        "text": "In freezing temperatures, wearing several thin layers allows you to adapt more easily to temperature changes.",
+        "section": "Equipment",
+        "question": "How should you dress for winter running?"
+      },
+      {
+        "text": "Getting enough sleep is essential for recovery and performance in runners.",
+        "section": "Recovery",
+        "question": "Why is sleep important for runners?"
+      },
+      {
+        "text": "Running form can be improved through video analysis to avoid incorrect loading and injuries.",
+        "section": "Technique",
+        "question": "How can you improve your running form?"
+      },
+      {
+        "text": "Running shoes with good cushioning are especially suitable for runners with knee problems.",
+        "section": "Equipment",
+        "question": "Which running shoes are suitable for knee problems?"
+      },
+      {
+        "text": "So-called 'carb-loading' refers to carbohydrate loading before long races.",
+        "section": "Nutrition",
+        "question": "What does carb-loading mean?"
+      },
+      {
+        "text": "Barefoot running strengthens foot muscles but should be introduced gradually to avoid injury.",
+        "section": "Training",
+        "question": "How can you start barefoot running safely?"
+      },
+      {
+        "text": "The right pace for endurance running should allow for comfortable conversation.",
+        "section": "Training",
+        "question": "How fast should you run during endurance runs?"
+      },
+      {
+        "text": "Running shoes should be cleaned and dried regularly to prevent bacteria and odors.",
+        "section": "Equipment",
+        "question": "How do you properly care for your running shoes?"
+      },
+      {
+        "text": "Interval training increases anaerobic capacity and improves speed.",
+        "section": "Training",
+        "question": "What are the benefits of interval training in running?"
+      },
+      {
+        "text": "Mental training can help runners boost motivation and reduce race anxiety.",
+        "section": "Training",
+        "question": "How does mental training help runners?"
+      },
+      {
+        "text": "Running clubs are a great opportunity to meet new running partners and exchange experiences.",
+        "section": "Training",
+        "question": "What is a running club?"
+      },
+      {
+        "text": "Stretching is better done after running, as it can overly relax the muscles if done before.",
+        "section": "Recovery",
+        "question": "When is stretching beneficial?"
+      },
+      {
+        "text": "Running apps help create training plans and track progress.",
+        "section": "Equipment",
+        "question": "How can running apps support training?"
+      },
+      {
+        "text": "Interval running can stimulate metabolism and promote fat burning.",
+        "section": "Training",
+        "question": "How does interval training support fat burning?"
+      },
+      {
+        "text": "Running shoes with pronation support help prevent injuries for runners with overpronation.",
+        "section": "Equipment",
+        "question": "What are pronation supports in running shoes?"
+      },
+      {
+        "text": "Setting goals is important for structured and motivated training.",
+        "section": "Training",
+        "question": "Why are goals important in run training?"
+      },
+      {
+        "text": "Running technique should be reviewed at least once a year to correct mistakes.",
+        "section": "Technique",
+        "question": "How often should you check your running technique?"
+      },
+      {
+        "text": "Running style is highly individual and should be adapted to your own body.",
+        "section": "Technique",
+        "question": "Is it advisable to completely change your running style?"
+      },
+      {
+        "text": "Running can strengthen the immune system and reduce susceptibility to illness.",
+        "section": "Health",
+        "question": "How does running affect the immune system?"
+      }
+    ]
+  }
+]
