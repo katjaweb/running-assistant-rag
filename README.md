@@ -35,8 +35,9 @@ The underlying FAQ document used for retrieval were created using the GPT-4o mod
 │   ├── prep_db.py           # Qdrant indexing & DB setup
 │   ├── rag.py.              # RAG pipeline
 │   └── requirements.txt
-├── data                     # Streamlit app and backend
+├── data
 │   ├── docs_with_ids.json   # documents for indexing
+│   ├── documents.json.      # documents for indexing
 │   ├── ground_truth_data.csv   # ground truth for evaluation
 ├── grafana
 │   ├── dashboards.json      # Dashboard settings for monitoring
