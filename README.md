@@ -6,25 +6,27 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot designed to assis
 
 The Running Assistant App for Running-Related Questions implements a Streamlit-based personal running assistant that answers user questions by combining document retrieval with generative AI. It includes the following components:
 
+- Uses Qdrant as a vector database for embedding storage and semantic search.
 - Retrieves relevant FAQ entries from a Qdrant vector collection based on the user's query.
 - Builds a prompt by combining the retrieved documents with the user's question.
 - Sends the prompt to the GPT-4o language model to generate a coherent response.
 - Orchestrates the full RAG pipeline — from retrieval to answer generation.
 - Provides an interactive interface via a Streamlit web app for interacting with the assistant.
+- Logs user queries, generated answers, and rich metadata including feedback, OpenAI costs, token counts, response times, and relevance to a PostgreSQL database for traceability and monitoring.
+- Utilizes Grafana for real-time visualization of key metrics such as token usage, response latency, and user feedback trends.
 
 The underlying FAQ document used for retrieval were created using the GPT-4o model.
 
 # Teck stack
 
 - **Qdrant:** Vector database used to store and retrieve document embeddings for semantic search in the RAG pipeline.
-- **OpenAI API:** Provides large language model capabilities (e.g. GPT-4) for generating responses and augmenting user queries with natural language understanding.
+- **OpenAI API:** Provides large language model capabilities (GPT-4o) for generating responses and augmenting user queries with natural language understanding.
 - **Streamlit:** Lightweight Python framework used to build the interactive web interface for the application.
 - **Docker:** Containerization platform used to package and deploy the entire application stack in isolated, reproducible environments.
-- **OpenAI API:** Provides large language model capabilities (GPT-4o) for generating responses and augmenting user queries with natural language understanding.
 - **PostgreSQL:** Relational database used to store structured data such as user sessions, logs, and configuration settings.
 - **Grafana:** Monitoring and visualization tool used to display metrics, logs, and performance dashboards connected to the backend.
 
-**Project structure**
+# Project structure
 
 ```text
 .
@@ -33,11 +35,11 @@ The underlying FAQ document used for retrieval were created using the GPT-4o mod
 │   ├── db.py                # PostgreSQL access & schema
 │   ├── generate_data.py     # Synthetic data generator
 │   ├── prep_db.py           # Qdrant indexing & DB setup
-│   ├── rag.py.              # RAG pipeline
+│   ├── rag.py               # RAG pipeline
 │   └── requirements.txt
 ├── data
 │   ├── docs_with_ids.json   # documents for indexing
-│   ├── documents.json.      # documents for indexing
+│   ├── documents.json
 │   ├── ground_truth_data.csv   # ground truth for evaluation
 ├── grafana
 │   ├── dashboards.json      # Dashboard settings for monitoring
@@ -65,7 +67,9 @@ Qdrant Indexing Pipeline: The script `prep_db.py` initializes and populates a Qd
 
 # Get started
 
-Follow these steps to set up and run the Running Assistant App:
+Follow these steps to set up and run the Running Assistant App.
+
+Make sure you have docker and and Python 3.12 installed. For this project Python Version 3.12.1 and docker Version 27.5.1-1 were used.
 
 **Install dependencies**
 
@@ -83,9 +87,7 @@ Enter the virtual environment created by `pipenv`:
 pipenv shell
 ```
 
-**Prerequisites**
-
-Set your OpenAi API Key.
+**Set your OpenAi API Key**
 
 To use the RAG application, you need an OpenAI API key. You can create one in your OpenAI account dashboard.
 
@@ -121,15 +123,15 @@ docker compose up
 
 This will start the following containers:
 
-- **qdrant:** Vector search database on port `6333`
-- **postgres:** PostgreSQL database on port `5432`
-- **streamlit:** The Running Assistant frontend on port `8501`
-- **grafana:** Monitoring dashboard on port `3000`
+**qdrant:** Vector search database on port `6333`
+**postgres:** PostgreSQL database on port `5432`
+**streamlit:** The Running Assistant frontend on port `8501`
+**grafana:** Monitoring dashboard on port `3000`
 
 Access the application and services:
 
-- **Streamlit app:** http://localhost:8501
-- **Grafana dashboard:** http://localhost:3000 (login with user=admin and password=admin)
+**Streamlit app:** http://localhost:8501
+**Grafana dashboard:** http://localhost:3000 (login with user=admin and password=admin)
 
 # Vector Search with Qdrant
 
@@ -170,7 +172,7 @@ Alternatively, you can run the script directly.
 python app/prep_db.py
 ```
 
-The `prep_db.py file handles the initialization and population of a Qdrant vector database
+The `prep_db.py` file handles the initialization and population of a Qdrant vector database
 collection with embedded documents for semantic search. It loads question-answer
 documents and ground truth data, generates vector embeddings using the `jinaai/jina-embeddings-v2-small-en` model, creates or resets the Qdrant collection, and upserts the document embeddings with associated metadata. Additionally, it initializes the PostgreSQL database schema.
 
@@ -253,8 +255,9 @@ Use Ctrl+C to stop live data generation.
 
 Access Grafana at http://localhost:3000 to explore:
 
-- Number of conversations
+- Latest requests
 - Feedback trends
 - Token usage ans OpenAI costs
+- Response time
 
 ![grafana_dashboard](./images/grafana_dashboard.png)
