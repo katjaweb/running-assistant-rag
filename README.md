@@ -12,7 +12,7 @@ The Running Assistant App for Running-Related Questions implements a Streamlit-b
 - Orchestrates the full RAG pipeline — from retrieval to answer generation.
 - Provides an interactive interface via a Streamlit web app for interacting with the assistant.
 
-The underlying FAQ document used for retrieval is written in German and were created using the GPT-4o model.
+The underlying FAQ document used for retrieval were created using the GPT-4o model.
 
 # Teck stack
 
