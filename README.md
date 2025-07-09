@@ -89,15 +89,6 @@ The following features are supported:
 - Recent Conversations: Displays a list of recent user queries filtered by relevance.
 - Feedback Statistics: Shows aggregated counts of positive and negative feedback for ongoing evaluation.
 
-**Conversation & Feedback Database Module:** The module `app/db.py` provides utility functions for managing conversation and feedback data in a PostgreSQL database for the Running Assistant application. It enables schema initialization, saving of user interactions, and retrieval of stored data for analysis or monitoring.
-
-- Initializes the database schema with conversations and feedback tables.
-- Saves structured user conversation data along with token usage, costs, and evaluation metadata.
-- Stores user feedback linked to specific conversations.
-- Retrieves recent conversations and aggregates feedback statistics.
-
-This module is used as part of a larger application pipeline, such as during the Qdrant indexing process or inside the Streamlit frontend.
-
 **Monitoring:** To support the automated evaluation of RAG responses and improve the system's transparency and effectiveness, a comprehensive monitoring workflow has been implemented. During each user interaction, the following metadata is logged:
 
 - The user's question and the generated answer
