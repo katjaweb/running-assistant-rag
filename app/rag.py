@@ -1,16 +1,19 @@
 """
-Running Assistant – A Retrieval-Augmented Generation (RAG) App for Running-Related Questions
+Running Assistant – Retrieval-Augmented Generation (RAG) System for Running-Related FAQs
 
-This module implements a Streamlit-based personal running assistant that answers user questions 
-by combining document retrieval with generative AI. It includes the following components:
+This module implements the core logic of a Streamlit-based assistant that answers user questions 
+about running using a Retrieval-Augmented Generation (RAG) approach. It combines semantic search 
+via Qdrant with generative responses from OpenAI's GPT models.
 
-- `elastic_search`: Searches an Elasticsearch index for relevant FAQ entries related to running.
-- `build_prompt`: Constructs a prompt using the retrieved documents and the user's question.
-- `llm`: Sends the prompt to the GPT-4o language model and retrieves the generated response.
-- `rag_pipeline`: Orchestrates the full RAG workflow — from retrieval to answer generation.
-- `main`: Launches the Streamlit app interface for interacting with the assistant.
+Core components:
+- `vector_search`: Retrieves relevant documents using vector similarity search via Qdrant.
+- `build_prompt`: Constructs a structured prompt based on retrieved FAQ entries.
+- `llm`: Sends the prompt to GPT-4o and returns the generated answer.
+- `evaluate_relevance`: Assesses how relevant the answer is to the original question.
+- `calculate_openai_cost`: Estimates API usage costs based on token count.
+- `rag_pipeline`: Coordinates the full RAG workflow — from retrieval to generation and evaluation.
 
-Intended for use as an interactive FAQ or personal coach for runners.
+Intended for use as an intelligent FAQ assistant or personal virtual coach for runners.
 """
 
 import os
@@ -39,8 +42,13 @@ def vector_search(question):
     Embeds the input question using the specified model and retrieves the top 5 most similar
     documents from the 'running-faq' collection based on cosine similarity. Returns a list
     of payloads (metadata and content) from the matched documents.
+
+    Args:
+        question (str): The user's input question.
+
+    Returns:
+        list[dict]: A list of matched FAQ documents with metadata and content.
     """
-    print('vector_search is used')
 
     query_points = qd_client.query_points(
         collection_name=COLLECTION_NAME,
@@ -72,11 +80,11 @@ def build_prompt(query, search_results):
 
     Args:
         query (str): The user's question.
-        search_results (list[dict]): A list of search result documents containing 'section', 
-                                     'question', and 'text' fields.
+        search_results (list[dict]): Retrieved documents containing section, question,
+        and answer text.
 
     Returns:
-        str: A formatted prompt string ready for use with a language model.
+        str: A formatted prompt string ready for the language model.
     """
 
     prompt_template = """
@@ -109,16 +117,17 @@ CONTEXT:
 
 def llm(prompt, model):
     """
-    Sends a prompt to the GPT-4o language model and returns the generated response.
+    Sends the constructed prompt to the GPT language model and returns the response.
 
-    Uses specified generation parameters such as temperature and top_p to control creativity 
-    and diversity of the output.
+    Uses specified generation parameters to balance creativity and coherence.
 
     Args:
-        prompt (str): The input prompt to be processed by the language model.
+        prompt (str): The input prompt for the model.
+        model (str): The model name.
 
     Returns:
-        str: The generated response from the language model.
+        tuple[str, dict, float]: Generated answer, token usage statistics,
+        and response time (in seconds).
     """
     # print(prompt)
     start_time = time.time()
@@ -145,6 +154,19 @@ def llm(prompt, model):
 
 
 def evaluate_relevance(question, answer):
+    """
+    Evaluates how relevant the generated answer is to the original user question.
+
+    Uses the GPT model to classify the response as 'RELEVANT', 'PARTLY_RELEVANT', or 'NON_RELEVANT',
+    along with a brief explanation.
+
+    Args:
+        question (str): The original user question.
+        answer (str): The generated answer to evaluate.
+
+    Returns:
+        tuple[str, str, dict]: Relevance label, explanation, and token usage for the evaluation.
+    """
     prompt_template = """
     You are an expert evaluator for a Retrieval-Augmented Generation (RAG) system.
     Your task is to analyze the relevance of the generated answer to the given question.
@@ -176,6 +198,17 @@ def evaluate_relevance(question, answer):
 
 
 def calculate_openai_cost(tokens):
+    """
+    Calculates the cost of an OpenAI API call based on token usage.
+
+    Assumes fixed pricing for prompt and completion tokens.
+
+    Args:
+        tokens (dict): Token counts (prompt, completion).
+
+    Returns:
+        float: Estimated API cost in USD.
+    """
     openai_cost = 0
 
     openai_cost = (tokens['prompt_tokens'] * 0.03 + tokens['completion_tokens'] * 0.06) / 1000
@@ -187,14 +220,16 @@ def rag_pipeline(query, model='gpt-4o'):
     """
     Executes a full Retrieval-Augmented Generation (RAG) pipeline to answer a user query.
 
-    Retrieves relevant documents using Elasticsearch, constructs a prompt with the retrieved
-    context, and generates a final answer using a language model.
+    Retrieves relevant documents using Qdrant, constructs a prompt with the retrieved
+    context, and generates a final answer using a language model. Evaluating the answer's relevance
+    and calculating API cost.
 
     Args:
         query (str): The user's input question.
+        model (str): The name of the model to use (default is 'gpt-4o').
 
     Returns:
-        str: The generated answer based on retrieved context and the language model's response.
+        dict: A response dictionary including the answer, evaluation, token usage, timing, and cost.
     """
     context_docs = vector_search(query)
     prompt = build_prompt(query, context_docs)

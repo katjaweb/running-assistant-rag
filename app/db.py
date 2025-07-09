@@ -20,7 +20,7 @@ tz = ZoneInfo("Europe/Berlin")
 
 def get_db_connection():
     """
-    Establish and return a connection to the PostgreSQL database using environment variables.
+    Establish and return a connection to the PostgreSQL database.
     """
     return psycopg2.connect(
         host=os.getenv("POSTGRES_HOST", "postgres"),
