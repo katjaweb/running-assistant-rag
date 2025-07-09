@@ -26,6 +26,10 @@ The underlying FAQ document used for retrieval were created using the GPT-4o mod
 - **PostgreSQL:** Relational database used to store structured data such as user sessions, logs, and configuration settings.
 - **Grafana:** Monitoring and visualization tool used to display metrics, logs, and performance dashboards connected to the backend.
 
+# Project scheme
+
+![project_scheme](./images/project_scheme.png)
+
 # Project structure
 
 ```text
@@ -121,7 +125,7 @@ This allows to test and validate the full evaluation and monitoring workflow wit
 
 Follow these steps to set up and run the Running Assistant App.
 
-Make sure you have docker and and Python 3.12 installed. For this project Python Version 3.12.1 and docker Version 27.5.1-1 were used.
+Make sure you have docker and Python 3.12 installed. For this project Python Version 3.12.1 and docker Version 27.5.1-1 were used.
 
 **Install dependencies**
 
@@ -139,7 +143,7 @@ Enter the virtual environment created by `pipenv`:
 pipenv shell
 ```
 
-**Set your OpenAi API Key**
+**Set your OpenAI API Key**
 
 To use the RAG application, you need an OpenAI API key. You can create one in your OpenAI account dashboard.
 
