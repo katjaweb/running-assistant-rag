@@ -2,7 +2,7 @@
 
 ![running](./images/running-6660187_640.jpg)
 
-This project is a Retrieval-Augmented Generation (RAG) chatbot designed to assist users with questions related to running and training. It provides information on running techniques, training plans, recovery strategies, and more. The application is intended for demonstration and experimentation purposes and serves as an interactive FAQ or personal coach for runners.
+This project is a Retrieval-Augmented Generation (RAG) chatbot designed to assist users with questions related to running and training. It provides information on running techniques, training plans, recovery strategies, and combines the strengths of language models and external knowledge retrieval to generate more informative, and contextually relevant responses. The application is intended for demonstration and experimentation purposes and serves as an interactive FAQ or personal coach for runners.
 
 The Running Assistant App for Running-Related Questions implements a Streamlit-based personal running assistant that answers user questions by combining document retrieval with generative AI. It includes the following components:
 
@@ -62,20 +62,11 @@ The underlying FAQ document used for retrieval were created using the GPT-4o mod
 The script performs the following:
 
 - Loads question-answer documents and ground truth data
-- Initializes a fresh Qdrant collection with vector configuration (using cosine distance and 512-dimensional embeddings).
+- Initializes a Qdrant collection with vector configuration (using cosine distance and 512-dimensional embeddings).
 - Embeds documents using the jinaai/jina-embeddings-v2-small-en model.
 - Builds and upserts vector points into Qdrant, attaching metadata as payloads.
 - Initializes the PostgreSQL database schema by executing the init_db() function.
 - Logs all key steps and metrics for debugging and monitoring.
-
-**Conversation & Feedback Database Module:** The module `app/db.py` provides utility functions for managing conversation and feedback data in a PostgreSQL database for the Running Assistant application. It enables schema initialization, saving of user interactions, and retrieval of stored data for analysis or monitoring.
-
-- Initializes the database schema with conversations and feedback tables.
-- Saves structured user conversation data along with token usage, costs, and evaluation metadata.
-- Stores user feedback linked to specific conversations.
-- Retrieves recent conversations and aggregates feedback statistics.
-
-This module is used as part of a larger application pipeline, such as during the Qdrant indexing process or inside the Streamlit frontend.
 
 **RAG-Pipeline:** This pipeline answers user questions by combining document retrieval with generative AI. It includes the following components:
 
@@ -93,6 +84,38 @@ The following features are supported:
 - Feedback Collection: Users can provide positive or negative feedback on answers, which is stored for quality monitoring.
 - Recent Conversations: Displays a list of recent user queries filtered by relevance.
 - Feedback Statistics: Shows aggregated counts of positive and negative feedback for ongoing evaluation.
+
+**Conversation & Feedback Database Module:** The module `app/db.py` provides utility functions for managing conversation and feedback data in a PostgreSQL database for the Running Assistant application. It enables schema initialization, saving of user interactions, and retrieval of stored data for analysis or monitoring.
+
+- Initializes the database schema with conversations and feedback tables.
+- Saves structured user conversation data along with token usage, costs, and evaluation metadata.
+- Stores user feedback linked to specific conversations.
+- Retrieves recent conversations and aggregates feedback statistics.
+
+This module is used as part of a larger application pipeline, such as during the Qdrant indexing process or inside the Streamlit frontend.
+
+**Monitoring:** To support the automated evaluation of RAG responses and improve the system's transparency and effectiveness, a comprehensive monitoring workflow has been implemented. During each user interaction, the following metadata is logged:
+
+- The user's question and the generated answer
+- Token usage and associated OpenAI API costs
+- Response time
+- Relevance evaluation (performed by a Judge LLM)
+- Optional user feedback (e.g., thumbs up/down)
+
+In addition to user feedback, the system employs an auxiliary Large Language Model, referred to as the Judge LLM, to evaluate the quality of the generated responses. This model assesses the relevance of each generated answer in relation to the user's original question and classifies it as "RELEVANT", "PARTLY_RELEVANT", or "NON_RELEVANT". This acts as a form of automated quality control. If the Judge LLM marks responses as less relevant.
+
+All collected metrics—including relevance scores, feedback, and cost data—are stored in a PostgreSQL database and visualized using Grafana dashboards. This provides insights into system usage, performance trends, and potential areas for improvement.
+
+**Synthetic Data Generation:** This RAG application is designed for demonstration and testing. To support this, the `generate_data.py` script creates synthetic conversation and feedback data to populate the PostgreSQL database.
+
+The script generates historical conversation data over a user-defined time period. Each synthetic entry includes:
+
+- A randomly selected running-related question
+- A predefined answer
+- Metadata such as response time, token usage, relevance score
+- Optional synthetic user feedback
+
+This allows to test and validate the full evaluation and monitoring workflow without needing live user input.
 
 # Get started
 
